@@ -175,44 +175,6 @@
     opacity: 1;
   }
 }
-</style><style>@keyframes spinner-line-fade-more {
-  0%, 100% {
-    opacity: 0; /* minimum opacity */
-  }
-  1% {
-    opacity: 1;
-  }
-}
-
-@keyframes spinner-line-fade-quick {
-  0%, 39%, 100% {
-    opacity: 0.25; /* minimum opacity */
-  }
-  40% {
-    opacity: 1;
-  }
-}
-
-@keyframes spinner-line-fade-default {
-  0%, 100% {
-    opacity: 0.22; /* minimum opacity */
-  }
-  1% {
-    opacity: 1;
-  }
-}
-
-@keyframes spinner-line-shrink {
-  0%, 25%, 100% {
-    /* minimum scale and opacity */
-    transform: scale(0.5);
-    opacity: 0.25;
-  }
-  26% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
 </style></head>
 <body><section id="top-1" class="engine"> v4.12.4</section>
   <section class="menu cid-qTkzRZLJNu" once="menu" id="menu1-3">
@@ -344,7 +306,7 @@
 
     <div class="container">
         <div class="media-container-row">
-<img src="./premium_files/standard.png" width="30%" height="30%">
+
             <div class="plan col-12 mx-2 my-2 justify-content-center col-lg-3">
                 <div class="plan-header text-center pt-5">
                     <h3 class="plan-title mbr-fonts-style display-5">
@@ -363,8 +325,9 @@
                 <div class="plan-body">
                     <div class="plan-list align-center">
                         <ul class="list-group list-group-flush mbr-fonts-style display-7">
-                            <li class="list-group-item">Re-evaluations will be required each month</li>
-                            <li class="list-group-item"> You will receive a thorough thirty-day plan telling you how much of each different type of nutrients to eat.</li>
+                            <li class="list-group-item">Custom nutrition plan that helps you reach your goal.</li>
+                            <li class="list-group-item">
+                                With discounts on workout plans</li>
                         </ul>
                     </div>
                     <div class="mbr-section-btn text-center py-4 pb-5">
@@ -427,11 +390,115 @@
   }).render('#paypal-button-container');
 </script>
 
-            
+            <div class="plan col-12 mx-2 my-2 justify-content-center col-lg-3">
+                <div class="plan-header text-center pt-5">
+                    <h3 class="plan-title mbr-fonts-style display-5">Advanced</h3>
+                    <div class="plan-price">
+                        <span class="price-value mbr-fonts-style display-5">
+                            $
+                        </span>
+                        <span class="price-figure mbr-fonts-style display-1">
+                            8</span>
+                        <small class="price-term mbr-fonts-style display-7">
+                            per month
+                        </small>
+                    </div>
+                </div>
+                <div class="plan-body">
+                    <div class="plan-list align-center">
+                        <ul class="list-group list-group-flush mbr-fonts-style display-7">
+                            <li class="list-group-item">Custom nutrition plan that helps you reach your goal.</li><li class="list-group-item">Access to a experienced nutrtion researcher.</li>
+                            <li class="list-group-item"><span style="background-color: transparent; font-size: 1rem;">With discounts on workout plans</span><br></li>
+                        </ul>
+                    </div>
+                    <div class="mbr-section-btn text-center py-4 pb-5">
+                        <a class="typeform-share button" href="https://form.typeform.com/to/pPngbEN4" data-mode="drawer_left" style="display:inline-block;text-decoration:none;background-color:#3A7685;color:white;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:50px;text-align:center;margin:0;height:50px;padding:0px 33px;border-radius:25px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" data-submit-close-delay="0" target="_blank">Launch me </a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+                    </div>
+                </div>
+    <div id="paypal-button-container"></div>
+<script src="./premium_files/js" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'rect',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'paypal',
+          
+      },
+      createOrder: function(data, actions) {
+          return actions.order.create({
+              purchase_units: [{
+                  amount: {
+                      value: '5'
+                  }
+              }]
+          });
+      },
+      onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+              alert('Transaction completed by ' + details.payer.name.given_name + '!');
+          });
+      }
+  }).render('#paypal-button-container');
+</script>
+            </div>
 
-            
+            <div class="plan col-12 mx-2 my-2 justify-content-center favorite col-lg-3">
+                <div class="plan-header text-center pt-5">
+                    <h3 class="plan-title mbr-fonts-style display-5">
+                        Premium
+                    </h3>
+                    <div class="plan-price">
+                        <span class="price-value mbr-fonts-style display-5">
+                            $
+                        </span>
+                        <span class="price-figure mbr-fonts-style display-1">100</span>
+                        <small class="price-term mbr-fonts-style display-7">
+                            per year
+                        </small>
+                    </div>
+                </div>
+                <div class="plan-body">
+                    <div class="plan-list align-center">
+                        <ul class="list-group list-group-flush mbr-fonts-style display-7">
+                            <li class="list-group-item">A nutrition plan made for you each month</li>
+                            <li class="list-group-item"><span style="background-color: transparent; font-size: 1rem;">Major discount on workout plans</span><br></li>
+                            <li class="list-group-item">
+                                Access to a experienced nutrtion researcher.</li><li class="list-group-item"><br></li>
+                        </ul>
+                    </div>
+                    <div class="mbr-section-btn text-center py-4 pb-5">
+                        <a class="typeform-share button" href="https://form.typeform.com/to/pPngbEN4" data-mode="drawer_left" style="display:inline-block;text-decoration:none;background-color:#3A7685;color:white;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:50px;text-align:center;margin:0;height:50px;padding:0px 33px;border-radius:25px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" data-submit-close-delay="0" target="_blank">Launch me </a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+                    </div>
+                </div>
+            </div>
 
-            
+            <div class="plan col-12 mx-2 my-2 justify-content-center col-lg-3">
+                <div class="plan-header text-center pt-5">
+                    <h3 class="plan-title mbr-fonts-style display-5">
+                        Ultimate
+                    </h3>
+                    <div class="plan-price">
+                        <span class="price-value mbr-fonts-style display-5">
+                            $
+                        </span>
+                        <span class="price-figure mbr-fonts-style display-1">10</span>
+                        <small class="price-term mbr-fonts-style display-7">
+                            per month</small>
+                    </div>
+                </div>
+                <div class="plan-body">
+                    <div class="plan-list align-center">
+                        <ul class="list-group list-group-flush mbr-fonts-style display-7">
+                            <li class="list-group-item">Custom nutrition plan that helps you reach your goal.</li>
+                            <li class="list-group-item"><span style="background-color: transparent; font-size: 1rem;">Access to a experienced nutrition researcher</span></li><li class="list-group-item"><span style="background-color: transparent; font-size: 1rem;">Major discount on workout plans</span></li><br><li class="list-group-item"><div class="mbr-section-btn text-center py-4 pb-5">
+          <a class="typeform-share button" href="https://form.typeform.com/to/pPngbEN4" data-mode="drawer_left" style="display:inline-block;text-decoration:none;background-color:#3A7685;color:white;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:50px;text-align:center;margin:0;height:50px;padding:0px 33px;border-radius:25px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" data-submit-close-delay="0" target="_blank">Launch me </a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script></div><span style="background-color: transparent; font-size: 1rem;"><br></span></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
 
         </div>
     
@@ -452,4 +519,4 @@
   
   
 
-<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></body></html>
+<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></body></html>
